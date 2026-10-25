@@ -9,18 +9,139 @@
 
   <style>
 
-    * {
+        * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      padding: 40px;
+      padding: 20px;
       font-family: Arial, sans-serif;
       color: #111;
       background: #fff;
       overflow-x: hidden;
     }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 40px;
+      }
+    }
+
+    header {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 15vw;
+      font-weight: normal;
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 8vw;
+      font-weight: normal;
+      margin: 20px 0;
+    }
+
+    h3 {
+      font-size: 5vw;
+      font-weight: normal;
+      margin: 0 0 30px;
+    }
+
+    @media (min-width: 1200px) {
+      h1 { font-size: 180px; }
+      h2 { font-size: 90px; }
+      h3 { font-size: 50px; }
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: 768px) {
+      section { margin-bottom: 120px; }
+    }
+
+    /* Works */
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 30px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .works {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .works img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Music */
+
+    .music {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px 20px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .music {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 50px 30px;
+      }
+    }
+
+    .song {
+      min-width: 0;
+    }
+
+    .song img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .song p {
+      margin: 12px 0 8px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .song p { font-size: 16px; }
+    }
+
+    .song audio {
+      width: 100%;
+    }
+
+    /* About / Contact */
+
+    #about {
+      margin-top: 80px;
+    }
+
+    #contact {
+      margin-top: 60px;
+    }
+
+    @media (min-width: 768px) {
+      #about { margin-top: 150px; }
+      #contact { margin-top: 100px; }
+    }
+
 
     header {
       margin-bottom: 30px;
