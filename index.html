@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Portfolio</title>
-
   <style>
     * {
       box-sizing: border-box;
@@ -14,58 +11,29 @@
 
     body {
       margin: 0;
-      padding: 20px;
+      padding: 30px;
       font-family: Arial, sans-serif;
       color: #111;
       background: #fff;
       overflow-x: hidden;
+      text-align: left;
     }
 
-    @media (min-width: 768px) {
-      body {
-         padding: 10px 20px 20px;
-      }
+    header, section {
+      margin-top: 0;
+      margin-bottom: 30px;
     }
 
-    header {
-       header {
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 15vw;
-      font-weight: normal;
-      margin: 0;
-      line-height: 1.1;
-    }
-
-    h2 {
-      font-size: 8vw;
-      font-weight: normal;
-      margin: 10px 0;
-    }
-
-    h3 {
-      font-size: 5vw;
-      font-weight: normal;
+    h1, h2, h3, p {
       margin: 0 0 30px;
+      font-weight: normal;
+      text-align: left;
     }
 
-    @media (min-width: 1200px) {
-      h1 { font-size: 180px; }
-      h2 { font-size: 90px; }
-      h3 { font-size: 50px; }
-    }
-
-    section {
-      margin-bottom: 80px;
-    }
-
-    @media (min-width: 768px) {
-      section { margin-bottom: 120px; }
-    }
-
-    /* Works */
+    h1 { font-size: 40px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; }
+    p { font-size: 16px; }
 
     .works {
       display: grid;
@@ -80,70 +48,56 @@
       }
     }
 
-    .works img {
+    .works img, .song img {
       width: 100%;
-      aspect-ratio: 3 / 4;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
 
-    /* Music */
+    .works img {
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
 
     .music {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 30px 20px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 30px;
       width: 100%;
     }
 
     @media (min-width: 768px) {
       .music {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 50px 30px;
+        max-width: 500px;
       }
     }
 
     .song {
-      min-width: 0;
+      width: 100%;
+      margin-bottom: 10px;
     }
 
     .song img {
-      width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-      display: block;
+      margin-bottom: 15px;
     }
 
     .song p {
-      margin: 12px 0 8px;
-      font-size: 14px;
-    }
-
-    @media (min-width: 768px) {
-      .song p { font-size: 16px; }
+      margin: 0 0 10px;
     }
 
     .song audio {
       width: 100%;
-    }
-
-    /* About / Contact */
-
-    #about {
-      margin-top: 80px;
-    }
-
-    #contact {
-      margin-top: 60px;
-    }
-
-    @media (min-width: 768px) {
-      #about { margin-top: 150px; }
-      #contact { margin-top: 100px; }
+      display: block;
     }
   </style>
 </head>
+<body>
 
+  <header>
+    <h1>Portfolio</h1>
+  </header>
 
 <body>
 
