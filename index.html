@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -19,36 +18,47 @@
       text-align: left;
     }
 
-    header, section {
-      margin-top: 0;
-      margin-bottom: 30px;
+    header,
+    section {
+      margin: 0 0 30px;
     }
 
-    h1, h2, h3, p {
+    h1,
+    h2,
+    h3,
+    p {
       margin: 0 0 30px;
       font-weight: normal;
       text-align: left;
     }
 
-    h1 { font-size: 100px; }
-    h2 { font-size: 50px; }
-    h3 { font-size: 25px; }
-    p { font-size: 20px; }
+    h1 {
+      font-size: 100px;
+    }
 
+    h2 {
+      font-size: 50px;
+    }
+
+    h3 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    /* 作品：スマホ2列、PC2列 */
     .works {
       display: grid;
-      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 30px;
       width: 100%;
     }
 
-    @media (min-width: 768px) {
-      .works {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .works img, .song img {
+    /* 画像 */
+    .works img,
+    .song img {
       width: 100%;
       height: auto;
       display: block;
@@ -59,17 +69,12 @@
       object-fit: cover;
     }
 
+    /* Music：スマホ2列、PC4列 */
     .music {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 30px;
       width: 100%;
-    }
-
-    @media (min-width: 768px) {
-      .music {
-        max-width: 500px;
-      }
     }
 
     .song {
@@ -90,6 +95,17 @@
     .song audio {
       width: 100%;
       display: block;
+    }
+
+    /* PC */
+    @media (min-width: 768px) {
+      .works {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .music {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
